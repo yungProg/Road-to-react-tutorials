@@ -6,8 +6,8 @@ function App(){
   return(
     <div>
       <h1>Hello {title}</h1>
-      <label for="name">Name</label>
-      <input type="text" placeholder="Name" />
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text" />
     </div>
   );
 }
