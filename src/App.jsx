@@ -24,16 +24,37 @@ const Lists = [
   }
 ]
 
-function App(){
-  return(
+const Search = () =>{
+  return (
     <div>
       <h1>{welcome.greeting} {welcome['title']}</h1>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
+    </div>
+  )
+}
 
+const List = () =>{
+  return(
+    <div>
       <ul>
-        {Lists.map(item => <li key={item.objectID}><span><a href={item.url}>{item.title}</a></span> <span>{item.author}</span> <span>{item.num_comments}</span> <span>{item.points}</span></li>)}
+        {Lists.map(item => <li key={item.objectID}>
+          <span><a href={item.url}>{item.title}</a></span>
+          <span>{item.author }</span> 
+          <span>{item.num_comments }</span> 
+          <span>{item.points }</span>
+          </li>)}
       </ul>
+    </div>
+  )
+}
+
+const App = () =>{
+  return(
+    <div>
+      <Search />
+
+      <List />
     </div>
   );
 }
