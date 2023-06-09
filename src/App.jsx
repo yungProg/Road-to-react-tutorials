@@ -24,18 +24,16 @@ const Lists = [
   }
 ]
 
-const Search = () =>{
-  return (
+const Search = () =>(
     <div>
       <h1>{welcome.greeting} {welcome['title']}</h1>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
     </div>
   )
-}
 
-const List = () =>{
-  return(
+
+const List = () =>(
     <div>
       <ul>
         {Lists.map(item => <li key={item.objectID}>
@@ -47,16 +45,16 @@ const List = () =>{
       </ul>
     </div>
   )
-}
 
-const App = () =>{
-  return(
+
+//concise body as multiple lines
+const App = () =>(
     <div>
       <Search />
 
       <List />
     </div>
   );
-}
+
 
 export default App;
