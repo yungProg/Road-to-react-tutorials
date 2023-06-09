@@ -24,14 +24,25 @@ const Lists = [
   }
 ]
 
-const Search = () =>(
+const Search = () =>{
+  const handleChange = (event) =>{
+    console.log(event)
+    console.log(event.target.value)
+  }
+
+  const handleBlur = (event1) => {
+    console.log(event1)
+    console.log(event1.target.value)
+  }
+
+  return(
     <div>
       <h1>{welcome.greeting} {welcome['title']}</h1>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />
+      <input onChange={handleChange} onBlur={handleBlur} id="search" type="text" />
     </div>
-  )
-
+  );
+  };
 
 const List = () =>(
     <div>
